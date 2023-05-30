@@ -1,0 +1,29 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@supports not (font-variation-settings: normal) {
+  @font-face {
+    font-family: rbk;
+    src: url("./assets/Rubik-Regular.ttf");
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: rbk;
+    src: url("./assets/Rubik-SemiBold.ttf");
+    font-weight: 600;
+  }
+}
+
+@supports (font-variation-settings: normal) {
+  @font-face {
+    font-family: rbk;
+    src: url("./assets/Rubik-VariableFont_wght.ttf");
+    font-weight: 100 1000;
+  }
+}
