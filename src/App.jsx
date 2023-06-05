@@ -13,7 +13,7 @@ function App() {
   const SUCC = "success";
   const ERR = "error";
 
-  async function handle_submission(event) {
+  function handle_submission(event) {
     event.preventDefault();
 
     const form = event.target;
