@@ -17,7 +17,12 @@ function App() {
     event.preventDefault();
 
     const form = event.target;
-    const text = form["todo-name"].value;
+    const text = form["todo-name"].value.trim();
+
+    form.reset();
+
+    if (!text) return;
+
     const todo = {
       name: text,
       done: false,
@@ -35,8 +40,6 @@ function App() {
     request.addEventListener(ERR, () => {
       console.log("error adding todo");
     });
-
-    form.reset();
   }
 
   function update_todo(id, prop) {
